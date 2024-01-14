@@ -12,7 +12,7 @@ LICENSE="MIT"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND="${PYTHON_DEPS}
+BDEPEND="${PYTHON_DEPS}
 	x11-libs/gtk+:3
 	media-libs/libsdl2
 	media-libs/libpng
@@ -20,7 +20,8 @@ DEPEND="${PYTHON_DEPS}
 	dev-db/sqlite
 	media-libs/fontconfig
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${BDEPEND}"
+DEPEND="${BDEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
